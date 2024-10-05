@@ -163,18 +163,62 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <img
-                class="block w-full h-full object-cover"
-                src="img/slide2.webp"
-                alt="slide photo"
-              />
+              <div class="relative">
+                <img
+                  class="block w-full h-[60%] object-cover"
+                  src="img/slide1.webp"
+                  alt="slide photo"
+                />
+                <div
+                  class="absolute right-[5%] bottom-[10%] w-[70px] flex items-center justify-around bg-[#d35462] text-white rounded-md p-1"
+                >
+                  <i class="fa-solid fa-feather"></i>Köşə
+                </div>
+              </div>
+              <div class="p-4">
+                <div
+                  class="flex gap-5 text-[12px] xs:text-[14px] font-semibold text-gray-500"
+                >
+                  <span class="text-[#1b95a1] font-bold">Cəmiyyət</span>
+                  <span
+                    ><i class="fa-regular fa-calendar mr-2"></i>4 OKT, 2024 /
+                    14:28</span
+                  >
+                  <span><i class="fa-solid fa-eye mr-2"></i>1799</span>
+                </div>
+                <h2 class="text-[20px] font-semibold my-5">
+                  <a href="#">Müəllimlər Günü, yaxud atalar və qızları</a>
+                </h2>
+              </div>
             </div>
             <div class="swiper-slide">
-              <img
-                class="block w-full h-full object-cover"
-                src="img/slide3.webp"
-                alt="slide photo"
-              />
+              <div class="relative">
+                <img
+                  class="block w-full h-[60%] object-cover"
+                  src="img/slide1.webp"
+                  alt="slide photo"
+                />
+                <div
+                  class="absolute right-[5%] bottom-[10%] w-[70px] flex items-center justify-around bg-[#d35462] text-white rounded-md p-1"
+                >
+                  <i class="fa-solid fa-feather"></i>Köşə
+                </div>
+              </div>
+              <div class="p-4">
+                <div
+                  class="flex gap-5 text-[12px] xs:text-[14px] font-semibold text-gray-500"
+                >
+                  <span class="text-[#1b95a1] font-bold">Cəmiyyət</span>
+                  <span
+                    ><i class="fa-regular fa-calendar mr-2"></i>4 OKT, 2024 /
+                    14:28</span
+                  >
+                  <span><i class="fa-solid fa-eye mr-2"></i>1799</span>
+                </div>
+                <h2 class="text-[20px] font-semibold my-5">
+                  <a href="#">Müəllimlər Günü, yaxud atalar və qızları</a>
+                </h2>
+              </div>
             </div>
           </div>
           <div
@@ -358,13 +402,16 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col md:grid md:grid-cols-2 mt-5 lg:gap-[80px] lg:mt-0">
+        <div
+          class="flex flex-col md:grid md:grid-cols-2 mt-5 lg:gap-[80px] lg:mt-0"
+        >
           <div class="flex flex-col gap-3">
             <p class="flex flex-col">
               Karyera <a class="underline" href="#">cv@oxu.az</a>
             </p>
             <p class="flex flex-col">
-              Ümumi sorğular üçün <a class="underline" href="#">editor@oxu.az</a>
+              Ümumi sorğular üçün
+              <a class="underline" href="#">editor@oxu.az</a>
               <span class="underline">055 224 76 86</span>
             </p>
           </div>
@@ -380,8 +427,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {
+        loop: true,
         pagination: {
           el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 3000,
         },
       });
     </script>
