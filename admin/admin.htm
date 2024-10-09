@@ -7,27 +7,206 @@
     <title>Admin panel</title>
   </head>
   <body>
-    <header>
-      <nav class="h-full fixed top-0 left-0 bg-black lg:w-[250px] w-[180px] p-5">
+    <main class="flex justify-between w-full">
+      <div class="h-[100vh] bg-black w-[20%] p-5 z-[5]">
         <p class="text-[26px] text-white">Admin Panel</p>
-      </nav>
-    </header>
-
-    <main class="h-[100vh] flex justify-center items-center">
-      <form class="w-1/2 flex flex-col ml-[200px] lg:ml-[350px] gap-[15px]">
-        <h1 class="text-[30px] font-semibold text-center mb-3">Xəbər yerləşdir</h1>
-        <label class="font-semibold text-[18px]" for="title">Başlıq əlavə et: </label>
-            <input class="border border-gray-400 rounded-md" id="title" type="text" /> 
-        <label class="font-semibold text-[18px]" for="desc">Mətn əlavə et: </label>
-            <textarea class="border border-gray-400 rounded-md" id="desc" type="text" rows="7"></textarea>
-        <label class="font-semibold text-[18px] " for="cover">Şəkil əlavə et: </label>
-            <input class="border border-gray-400 rounded-md" id="cover" type="file" />
-        <label class="font-semibold text-[18px] " for="date">Tarix əlavə et: </label>
-            <input class="border border-gray-400 rounded-md" id="date" type="date" />
-        <label class="font-semibold text-[18px] " for="time">Saat əlavə et: </label>
-            <input class="border border-gray-400 rounded-md" id="time" type="time" />
-        <button type="submit" class="w-full lg:w-[200px] m-auto bg-green-800 text-white p-2 rounded-md mt-5">Yüklə</button>
-      </form>
+      </div>
+      <div class="flex flex-col justify-around items-center w-[80%]">
+        <div>
+          <button onclick="" class="bg-green-600 w-[200px] text-white p-2 rounded-md">
+            Xəbər yerləşdir
+          </button>
+        </div>
+        <div
+          id="popup"
+          class="hidden w-full h-full justify-center items-center fixed top-[-100%] backdrop-blur-[2px]"
+        >
+          <form class="w-[500px] flex flex-col gap-[10px]">
+            <h1 class="text-[30px] font-semibold text-center mb-3">
+              Xəbər yerləşdir
+            </h1>
+            <label class="font-semibold" for="title">Başlıq əlavə et: </label>
+            <input
+              class="border border-gray-400 rounded-md"
+              id="title"
+              type="text"
+            />
+            <label class="font-semibold" for="desc">Mətn əlavə et: </label>
+            <textarea
+              class="border border-gray-400 rounded-md"
+              id="desc"
+              type="text"
+              rows="7"
+            ></textarea>
+            <label class="font-semibold" for="cover">Şəkil əlavə et: </label>
+            <input
+              class="border border-gray-400 rounded-md"
+              id="cover"
+              type="file"
+            />
+            <label class="font-semibold" for="date">Tarix əlavə et: </label>
+            <input
+              class="border border-gray-400 rounded-md"
+              id="date"
+              type="date"
+            />
+            <label class="font-semibold" for="time">Saat əlavə et: </label>
+            <input
+              class="border border-gray-400 rounded-md"
+              id="time"
+              type="time"
+            />
+            <button
+              type="submit"
+              class="w-full lg:w-[200px] m-auto bg-green-800 text-white p-2 rounded-md mt-5"
+            >
+              Yüklə
+            </button>
+          </form>
+        </div>
+        <div class="container p-2 mx-auto sm:p-4 text-gray-800">
+          <h2 class="mb-4 text-2xl font-bold text-center leading-tight">
+            Xəbərlər
+          </h2>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-xs">
+              <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col class="w-24" />
+              </colgroup>
+              <thead class="bg-gray-300">
+                <tr class="text-left">
+                  <th class="p-3">Invoice #</th>
+                  <th class="p-3">Client</th>
+                  <th class="p-3">Issued</th>
+                  <th class="p-3">Due</th>
+                  <th class="p-3 text-right">Amount</th>
+                  <th class="p-3">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="border-b border-opacity-20 border-gray-300 bg-gray-50"
+                >
+                  <td class="p-3">
+                    <p>97412378923</p>
+                  </td>
+                  <td class="p-3">
+                    <p>Microsoft Corporation</p>
+                  </td>
+                  <td class="p-3">
+                    <p>14 Jan 2022</p>
+                    <p class="text-gray-600">Friday</p>
+                  </td>
+                  <td class="p-3">
+                    <p>01 Feb 2022</p>
+                    <p class="text-gray-600">Tuesday</p>
+                  </td>
+                  <td class="p-3 text-right">
+                    <p>$15,792</p>
+                  </td>
+                  <td class="p-3 text-right">
+                    <span
+                      class="px-3 py-1 font-semibold rounded-md bg-violet-600 text-gray-50"
+                    >
+                      <span>Pending</span>
+                    </span>
+                  </td>
+                </tr>
+                <tr
+                  class="border-b border-opacity-20 border-gray-300 bg-gray-50"
+                >
+                  <td class="p-3">
+                    <p>97412378923</p>
+                  </td>
+                  <td class="p-3">
+                    <p>Tesla Inc.</p>
+                  </td>
+                  <td class="p-3">
+                    <p>14 Jan 2022</p>
+                    <p class="text-gray-600">Friday</p>
+                  </td>
+                  <td class="p-3">
+                    <p>01 Feb 2022</p>
+                    <p class="text-gray-600">Tuesday</p>
+                  </td>
+                  <td class="p-3 text-right">
+                    <p>$275</p>
+                  </td>
+                  <td class="p-3 text-right">
+                    <span
+                      class="px-3 py-1 font-semibold rounded-md bg-violet-600 text-gray-50"
+                    >
+                      <span>Pending</span>
+                    </span>
+                  </td>
+                </tr>
+                <tr
+                  class="border-b border-opacity-20 border-gray-300 bg-gray-50"
+                >
+                  <td class="p-3">
+                    <p>97412378923</p>
+                  </td>
+                  <td class="p-3">
+                    <p>Coca Cola co.</p>
+                  </td>
+                  <td class="p-3">
+                    <p>14 Jan 2022</p>
+                    <p class="text-gray-600">Friday</p>
+                  </td>
+                  <td class="p-3">
+                    <p>01 Feb 2022</p>
+                    <p class="text-gray-600">Tuesday</p>
+                  </td>
+                  <td class="p-3 text-right">
+                    <p>$8,950,500</p>
+                  </td>
+                  <td class="p-3 text-right">
+                    <span
+                      class="px-3 py-1 font-semibold rounded-md bg-violet-600 text-gray-50"
+                    >
+                      <span>Pending</span>
+                    </span>
+                  </td>
+                </tr>
+                <tr
+                  class="border-b border-opacity-20 border-gray-300 bg-gray-50"
+                >
+                  <td class="p-3">
+                    <p>97412378923</p>
+                  </td>
+                  <td class="p-3">
+                    <p>Nvidia Corporation</p>
+                  </td>
+                  <td class="p-3">
+                    <p>14 Jan 2022</p>
+                    <p class="text-gray-600">Friday</p>
+                  </td>
+                  <td class="p-3">
+                    <p>01 Feb 2022</p>
+                    <p class="text-gray-600">Tuesday</p>
+                  </td>
+                  <td class="p-3 text-right">
+                    <p>$98,218</p>
+                  </td>
+                  <td class="p-3 text-right">
+                    <span
+                      class="px-3 py-1 font-semibold rounded-md bg-violet-600 text-gray-50"
+                    >
+                      <span>Pending</span>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
+    <script src="../js/admin.js"></script>
   </body>
 </html>
