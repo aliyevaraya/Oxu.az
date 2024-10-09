@@ -26,8 +26,8 @@ function getNews() {
                 </div>
                 <div class="p-4">
                     <div class="flex gap-5 text-[12px] font-semibold text-gray-500">
-                        <span><i class="fa-regular fa-calendar mr-2"></i>4 OKT, 2024 / 14:28</span>
-                        <span><i class="fa-solid fa-eye mr-2"></i>1799</span>
+                        <span><i class="fa-regular fa-calendar mr-2"></i>${news.date} / 15:48</span>
+                        <span><i class="fa-solid fa-eye mr-2"></i>${news.view}</span>
                     </div>
                     <h2 class="text-[18px] font-semibold my-5">
                         <a href="/pages/detail.htm?id=${news.id}">${news.title}</a>

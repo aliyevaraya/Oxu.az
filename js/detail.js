@@ -28,9 +28,9 @@ function getNews() {
               <div>
                 <span
                   ><i class="fa-regular fa-calendar mr-2"></i>${el.date} /
-                  ${el.time}</span
+                  13:48</span
                 >
-                <span><i class="fa-solid fa-eye mr-2"></i>1799</span>
+                <span><i class="fa-solid fa-eye mr-2"></i>${el.view}</span>
               </div>
             </div>
             <h2 class="text-[30px] font-semibold my-5">${el.title}</h2>
