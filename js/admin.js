@@ -17,11 +17,9 @@ function handleSubmit(event) {
   event.preventDefault();
   if (title.value.trim().length < 5 || title.value.trim().length > 250) {
     alert("Başlıq 5 simvoldan çox olmalıdır");
-    return;
   }
   if (desc.value.trim().length < 15) {
     alert("Mətn 15 simvoldan çox olmalıdır");
-    return;
   }
 
   const obj = {
@@ -40,10 +38,11 @@ function handleSubmit(event) {
     },
   })
     .then((res) => res.json())
-    .then((json) => console.log(json));
-
-  getAllData();
-  handleTable()
+    .then((json) => {
+      console.log(json);
+      DATA.push(json);
+    });
+  handleTable();
   handlePopup();
 }
 
@@ -56,7 +55,6 @@ function getAllData() {
       handleTable();
     });
 }
-getAllData();
 
 function deleteNews(id) {
   fetch(`https://6704e06b031fd46a830dbb27.mockapi.io/oxuaz/${id}`, {
@@ -89,3 +87,5 @@ function handleTable() {
           `;
   });
 }
+
+getAllData();
