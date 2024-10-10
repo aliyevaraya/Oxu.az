@@ -1,7 +1,7 @@
 const popup = document.getElementById("popup");
 
 function handlePopup() {
-  popup.classList.toggle("!top-0");
+  popup.classList.toggle("!flex");
 }
 function preventClick(e) {
   e.stopPropagation();

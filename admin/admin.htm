@@ -21,7 +21,7 @@
         <div
           onclick="handlePopup()"
           id="popup"
-          class="w-full h-full flex justify-center items-center fixed top-[-100%] backdrop-blur-[5px]"
+          class="w-full h-full hidden justify-center items-center fixed top-[0%] backdrop-blur-[5px]"
         >
           <form onsubmit="handleSubmit(event)" onclick="preventClick(event)" class="w-[500px] flex flex-col gap-[8px] border-2 border-green-800 text-green-950 p-4 rounded-md">
             <h1 class="text-[30px] font-semibold text-center mb-3">
@@ -77,13 +77,6 @@
           </h2>
           <div class="overflow-x-auto">
             <table class="w-full">
-              <colgroup>
-                <col />
-                <col />
-                <col />
-                <col />
-                <col />
-              </colgroup>
               <thead class="bg-gray-300">
                 <tr class="text-left">
                   <th class="p-3">Başlıq</th>
