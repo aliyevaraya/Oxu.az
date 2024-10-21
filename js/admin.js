@@ -39,10 +39,9 @@ function handleSubmit(event) {
   })
     .then((res) => res.json())
     .then((json) => {
-      console.log(json);
-      DATA.push(json);
+      DATA.length = 0;
     });
-  handleTable();
+  getAllData();
   handlePopup();
 }
 
@@ -55,13 +54,13 @@ function getAllData() {
       handleTable();
     });
 }
+getAllData()
 
 function deleteNews(id) {
   fetch(`https://6704e06b031fd46a830dbb27.mockapi.io/oxuaz/${id}`, {
     method: "DELETE",
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
   DATA = DATA.filter((item) => item.id != id);
   handleTable();
 }
